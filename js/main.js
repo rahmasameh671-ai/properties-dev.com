@@ -144,9 +144,14 @@ function initLeadForm() {
       console.warn('LocalStorage error:', storageErr);
     }
 
-    // Google Ads & Analytics Conversion Event (AW-17050255563)
+    // Google Ads Conversion Event (AW-17050255563/JR1FCJChzKsdEMuBmcI_)
     if (typeof window.gtag === 'function') {
       try {
+        window.gtag('event', 'conversion', {
+          send_to: 'AW-17050255563/JR1FCJChzKsdEMuBmcI_',
+          value: 1.0,
+          currency: 'EGP'
+        });
         window.gtag('event', 'generate_lead', {
           event_category: 'Lead',
           event_label: 'Hyde Park Interest Form — properties-dev.com',
@@ -290,6 +295,13 @@ function initAnalytics() {
     link.addEventListener('click', () => {
       if (typeof window.gtag === 'function') {
         try {
+          // Google Ads Conversion Action for WhatsApp Click
+          window.gtag('event', 'conversion', {
+            send_to: 'AW-17050255563/JR1FCJChzKsdEMuBmcI_',
+            value: 1.0,
+            currency: 'EGP'
+          });
+          // Google Analytics Contact Event
           window.gtag('event', 'contact', {
             event_category: 'WhatsApp',
             event_label: link.getAttribute('href') || 'WhatsApp Consultation — properties-dev.com',
