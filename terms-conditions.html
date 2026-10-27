@@ -1,136 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17103245801"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); 
+    gtag('config', 'AW-17103245801');
+  </script>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Terms &amp; Conditions | properties-dev.com</title>
-  <meta name="description" content="Terms &amp; Conditions for properties-dev.com — Independent Real Estate Consultancy & Strategic Marketing Partner.">
-  
-  <!-- OpenGraph -->
-  <meta property="og:title" content="Terms &amp; Conditions | properties-dev.com">
-  <meta property="og:description" content="Official Terms &amp; Conditions governing the use of properties-dev.com.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms &amp; Conditions | properties-dev.com — Independent Real Estate Consultancy</title>
+  <meta name="description" content="Official Terms &amp; Conditions of properties-dev.com, an independent real estate consultancy and authorized marketing partner in Egypt.">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23FFFFFF'/%3E%3Cpath d='M9 8h8a5 5 0 0 1 0 10H9V8zm0 10h4v6H9v-6zm4-6v2h4a1 1 0 0 0 0-2h-4z' fill='%23000000'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Crect width='32' height='32' rx='6' fill='%231A202C'/%3E%3Cpath d='M8 22V10L16 6L24 10V22L16 26L8 22Z' stroke='%23FFFFFF' stroke-width='1.8' stroke-linejoin='round'/%3E%3Cpath d='M16 6V26' stroke='%23FFFFFF' stroke-width='1.5' stroke-dasharray='2 2'/%3E%3C/svg%3E">
 
-  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    /* STRICT ZERO GOLD POLICY - SOLID BLACK & 100% PURE WHITE ONLY */
+    body {
+      background-color: #000000 !important;
+      color: #FFFFFF !important;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .font-editorial {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+  </style>
 </head>
-<body class="legal-page">
+<body class="bg-black text-white min-h-screen flex flex-col justify-between selection:bg-white selection:text-black antialiased">
 
-  <!-- Standalone Legal Header -->
-  <header class="legal-header">
-    <div class="container">
-      <a href="index.html" class="legal-back-nav" aria-label="Return to Homepage">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="19" y1="12" x2="5" y2="12"></line>
-          <polyline points="12 19 5 12 12 5"></polyline>
+  <!-- Top Clean Navigation / Back Bar -->
+  <header class="w-full border-b border-neutral-900 py-6 px-6 sm:px-12">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <a href="/hyde-park" class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-white hover:text-neutral-300 transition-colors font-medium">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"></path>
         </svg>
-        Back to properties-dev.com
+        <span>Return to Portfolio</span>
       </a>
-      <div class="legal-brand-title">PROPERTIES-DEV</div>
-      <div class="legal-brand-sub">By properties-dev.com — Independent Real Estate Consultancy</div>
+
+      <div class="font-cinzel text-xs uppercase tracking-[0.3em] text-neutral-400 font-semibold">
+        PROPERTIES-DEV.COM
+      </div>
     </div>
   </header>
 
-  <!-- Legal Content -->
-  <main class="legal-main">
-    <div class="container">
-      <article class="legal-article">
-        <h1 class="legal-doc-title">Terms &amp; Conditions</h1>
-        <div class="legal-last-updated">Effective Date: January 1, 2026 | Governing Entity: properties-dev.com</div>
+  <!-- Main Legal Document Content -->
+  <main class="flex-grow flex items-center justify-center py-16 px-6 sm:px-12">
+    <article class="max-w-3xl w-full text-center space-y-12">
+      
+      <!-- Document Header -->
+      <header class="space-y-4">
+        <div class="inline-block px-4 py-1.5 border border-neutral-800 rounded-full text-xs uppercase tracking-[0.25em] text-neutral-300 font-semibold mb-2">
+          Independent Real Estate Consultancy &bull; Strategic Marketing Partner
+        </div>
+        <h1 class="font-editorial text-3xl sm:text-5xl font-bold tracking-tight text-white uppercase">
+          Terms &amp; Conditions
+        </h1>
+        <p class="text-xs uppercase tracking-widest text-neutral-400 font-medium">
+          Last updated: January 1, 2026 &bull; Entity: properties-dev.com
+        </p>
+        <div class="w-16 h-px bg-white mx-auto mt-6 opacity-60"></div>
+      </header>
 
-        <section class="legal-content-section">
-          <h2 class="legal-section-heading">1. Introduction &amp; Corporate Identity</h2>
-          <p class="legal-text">
-            These Terms &amp; Conditions govern your access to and utilization of the website and consultation services provided by <strong>properties-dev.com</strong> ("properties-dev.com", "we", "our", or "the Platform").
-          </p>
-          <p class="legal-text">
-            properties-dev.com operates exclusively as an <strong>Independent Real Estate Consultancy and Strategic Marketing Partner</strong>. By accessing this platform, requesting private consultations, or communicating with our advisory team, you acknowledge and agree to be bound by these Terms in full.
-          </p>
-        </section>
+      <!-- Primary Legal Core Clause -->
+      <section class="border border-neutral-800 bg-neutral-950/80 rounded-2xl p-8 sm:p-12 text-center space-y-6 shadow-2xl">
+        <p class="text-base sm:text-lg leading-relaxed text-white font-normal">
+          &ldquo;Welcome to <span class="font-semibold text-white">properties-dev.com</span>. By accessing this platform, you agree to these Terms. properties-dev.com acts as an independent real estate consultancy and authorized marketing partner. Architectural renders, images, and specifications are conceptual representations provided for illustrative purposes only. All transactions, contracts, and legal inquiries are governed by the laws of the Arab Republic of Egypt (Courts of Cairo).&rdquo;
+        </p>
+      </section>
 
-        <section class="legal-content-section">
-          <h2 class="legal-section-heading">2. Scope of Advisory Services &amp; Developer Independence</h2>
-          <p class="legal-text">
-            properties-dev.com bridges discerning individual and institutional investors with premier real estate developers throughout Egypt, including New Cairo, Mostakbal City, Ras El Hekma (North Coast), West Cairo (Sheikh Zayed &amp; 6th of October), and Red Sea destinations.
-          </p>
-          <p class="legal-text">
-            This landing page and related platforms are operated by properties-dev.com as an independent real estate consultancy and authorized marketing partner, and do not constitute the official website of any single master developer. All project titles, architectural renders, masterplans, and developer trademarks remain the intellectual property of their respective developers.
-          </p>
-        </section>
+      <!-- Corporate & Entity Details -->
+      <section class="border border-neutral-800 rounded-xl p-6 bg-neutral-900/40 text-center space-y-3">
+        <div class="text-xs uppercase tracking-[0.2em] text-neutral-400 font-semibold">Consultancy Entity &amp; Authorized Office</div>
+        <div class="text-sm text-white font-medium space-y-1">
+          <p><strong class="text-white">Entity:</strong> properties-dev.com</p>
+          <p><strong class="text-white">Address:</strong> New Cairo S5-3, Second District, Fifth Settlement, First Floor.</p>
+          <p><strong class="text-white">Direct Line:</strong> 01005080951 &bull; WhatsApp: +201033373331</p>
+        </div>
+      </section>
 
-        <section class="legal-content-section">
-          <h2 class="legal-section-heading">3. Pricing, Availability &amp; Market Information</h2>
-          <p class="legal-text">
-            All property descriptions, unit specifications, delivery timelines, payment schedules, and starting prices displayed or communicated are indicative and subject to change without prior notice. Final contracts, binding payment terms, and legal unit allocations are executed directly between the purchaser and the designated development partner.
+      <!-- Detailed Compliance Articles -->
+      <section class="space-y-10 text-left pt-4">
+        
+        <div class="space-y-3 border-t border-neutral-900 pt-8 text-center">
+          <h2 class="font-editorial text-lg sm:text-xl font-semibold uppercase tracking-wider text-white">
+            1. Role as Independent Consultancy &amp; Strategic Marketing Partner
+          </h2>
+          <p class="text-neutral-300 leading-relaxed text-sm max-w-2xl mx-auto">
+            <strong class="text-white">properties-dev.com</strong> operates strictly as an independent real estate consultancy and strategic marketing partner for master developments in Egypt (including projects by Hyde Park Developments). properties-dev.com is not the developer, owner, or general contractor of any advertised compound or real estate project.
           </p>
-        </section>
+        </div>
 
-        <section class="legal-content-section">
-          <h2 class="legal-section-heading">4. Data Collection, Privacy &amp; Authorized Partners</h2>
-          <div class="legal-highlight-box">
-            <p class="legal-text" style="margin-bottom: 0;">
-              <strong>Data Governance Commitment:</strong> Data collected across properties-dev.com is collected solely for real estate consultation and shared only with authorized development partners directly related to your selected areas of inquiry.
-            </p>
-          </div>
-          <p class="legal-text">
-            By submitting your name and phone number on our consultation forms, you authorize properties-dev.com to contact you via telephone, WhatsApp, or email solely regarding relevant luxury residential and commercial investment opportunities.
+        <div class="space-y-3 border-t border-neutral-900 pt-8 text-center">
+          <h2 class="font-editorial text-lg sm:text-xl font-semibold uppercase tracking-wider text-white">
+            2. Illustrative Nature of Renders &amp; Visual Materials
+          </h2>
+          <p class="text-neutral-300 leading-relaxed text-sm max-w-2xl mx-auto">
+            All visual renders, CGI impressions, virtual walk-throughs, floor plans, dimensions, and architectural illustrations showcased on properties-dev.com are conceptual and illustrative in nature. Master developers reserve the right to modify layouts, finishes, landscape schemes, and master plans in accordance with statutory approvals.
           </p>
-        </section>
+        </div>
 
-        <section class="legal-content-section">
-          <h2 class="legal-section-heading">5. Limitation of Liability</h2>
-          <p class="legal-text">
-            While properties-dev.com conducts thorough market research and due diligence to ensure the accuracy of all market data, we shall not be held liable for any direct, indirect, incidental, or consequential losses resulting from reliance on general consultation advice, fluctuating market values, or developer schedule revisions. Investors are encouraged to seek independent financial and legal guidance prior to final execution of real estate purchases.
+        <div class="space-y-3 border-t border-neutral-900 pt-8 text-center">
+          <h2 class="font-editorial text-lg sm:text-xl font-semibold uppercase tracking-wider text-white">
+            3. Pricing, Down Payments &amp; Availability Subject to Change
+          </h2>
+          <p class="text-neutral-300 leading-relaxed text-sm max-w-2xl mx-auto">
+            Pricing milestones (e.g., 5.9M EGP, 6.4M EGP, 8M EGP, 9.3M EGP, 11.7M EGP), down payment percentages (starting from 5%), installment schedules (up to 10 years), and unit availability are determined solely by the master developer and are subject to immediate revision or withdrawal without notice.
           </p>
-        </section>
+        </div>
 
-        <section class="legal-content-section">
-          <h2 class="legal-section-heading">6. Governing Law &amp; Jurisdiction</h2>
-          <p class="legal-text">
-            These Terms &amp; Conditions shall be governed by, interpreted, and construed in accordance with the substantive laws of the <strong>Arab Republic of Egypt</strong>.
+        <div class="space-y-3 border-t border-neutral-900 pt-8 text-center">
+          <h2 class="font-editorial text-lg sm:text-xl font-semibold uppercase tracking-wider text-white">
+            4. Limitation of Liability
+          </h2>
+          <p class="text-neutral-300 leading-relaxed text-sm max-w-2xl mx-auto">
+            properties-dev.com facilitates unbiased consultation and direct developer access. Official sales agreements, title deeds, construction warranties, and delivery timelines are executed directly between the purchasing client and the respective developer entity. properties-dev.com assumes no operational liability for developer delivery schedules or contractual amendments.
           </p>
-          <p class="legal-text">
-            Any dispute, legal claim, or judicial action arising out of or relating to properties-dev.com shall fall under the exclusive jurisdiction of the competent <strong>Courts of Cairo, Egypt</strong>.
-          </p>
-        </section>
+        </div>
 
-        <section class="legal-content-section">
-          <h2 class="legal-section-heading">7. Corporate Contact &amp; Inquiries</h2>
-          <p class="legal-text">
-            For questions, corporate inquiries, or partnership discussions, you may connect with our management desk via WhatsApp at <strong>+201033373331</strong> or directly through properties-dev.com.
+        <div class="space-y-3 border-t border-neutral-900 pt-8 text-center">
+          <h2 class="font-editorial text-lg sm:text-xl font-semibold uppercase tracking-wider text-white">
+            5. Governing Law &amp; Judicial Jurisdiction
+          </h2>
+          <p class="text-neutral-300 leading-relaxed text-sm max-w-2xl mx-auto">
+            These Terms &amp; Conditions and any engagement with properties-dev.com shall be governed exclusively by and construed in accordance with the laws of the <strong class="text-white">Arab Republic of Egypt</strong>. Any dispute, claim, or difference arising hereunder shall be submitted to the exclusive jurisdiction of the competent <strong class="text-white">Courts of Cairo</strong>.
           </p>
-        </section>
-      </article>
-    </div>
+        </div>
+
+      </section>
+
+      <!-- Return Button Centered -->
+      <div class="pt-8 text-center">
+        <a href="/hyde-park" class="inline-block px-8 py-3.5 border border-white text-white uppercase text-xs tracking-[0.2em] font-semibold hover:bg-white hover:text-black transition-all duration-300 rounded-lg">
+          Back to properties-dev.com/hyde-park
+        </a>
+      </div>
+
+    </article>
   </main>
 
   <!-- Legal Footer -->
-  <footer class="legal-footer">
-    <div class="container">
-      <div>By properties-dev.com — Independent Real Estate Consultancy &amp; Strategic Marketing Partner</div>
-      <div style="margin-top: 0.5rem; opacity: 0.75;">© 2026 properties-dev.com. All rights reserved.</div>
-    </div>
+  <footer class="w-full border-t border-neutral-900 py-8 px-6 text-center text-xs tracking-widest text-neutral-400 uppercase">
+    <p>&copy; 2026 properties-dev.com &mdash; Strategic Partners</p>
   </footer>
-
-  <!-- Floating WhatsApp Icon -->
-  <a 
-    href="https://wa.me/201033373331" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    class="floating-whatsapp-btn" 
-    aria-label="Direct WhatsApp Contact +201033373331"
-  >
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-  </a>
 
 </body>
 </html>

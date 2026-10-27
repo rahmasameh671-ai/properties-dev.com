@@ -1,130 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17103245801"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date()); 
+    gtag('config', 'AW-17103245801');
+  </script>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>Privacy Policy | properties-dev.com</title>
-  <meta name="description" content="Privacy Policy for properties-dev.com — Independent Real Estate Consultancy & Strategic Marketing Partner.">
-  
-  <!-- OpenGraph -->
-  <meta property="og:title" content="Privacy Policy | properties-dev.com">
-  <meta property="og:description" content="Official Privacy Policy and data governance standards of properties-dev.com.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | properties-dev.com — Independent Real Estate Consultancy</title>
+  <meta name="description" content="Official Privacy Policy of properties-dev.com, an independent real estate consultancy and authorized marketing partner in Egypt.">
   
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23FFFFFF'/%3E%3Cpath d='M9 8h8a5 5 0 0 1 0 10H9V8zm0 10h4v6H9v-6zm4-6v2h4a1 1 0 0 0 0-2h-4z' fill='%23000000'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Crect width='32' height='32' rx='6' fill='%231A202C'/%3E%3Cpath d='M8 22V10L16 6L24 10V22L16 26L8 22Z' stroke='%23FFFFFF' stroke-width='1.8' stroke-linejoin='round'/%3E%3Cpath d='M16 6V26' stroke='%23FFFFFF' stroke-width='1.5' stroke-dasharray='2 2'/%3E%3C/svg%3E">
 
-  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="../css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    /* STRICT ZERO GOLD POLICY - SOLID BLACK & 100% PURE WHITE ONLY */
+    body {
+      background-color: #000000 !important;
+      color: #FFFFFF !important;
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .font-editorial {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+    .font-cinzel {
+      font-family: 'Cinzel', serif;
+    }
+  </style>
 </head>
-<body class="legal-page">
+<body class="bg-black text-white min-h-screen flex flex-col justify-between selection:bg-white selection:text-black antialiased">
 
-  <!-- Standalone Legal Header -->
-  <header class="legal-header">
-    <div class="container">
-      <a href="../index.html" class="legal-back-nav" aria-label="Return to Homepage">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <line x1="19" y1="12" x2="5" y2="12"></line>
-          <polyline points="12 19 5 12 12 5"></polyline>
+  <!-- Top Clean Navigation / Back Bar -->
+  <header class="w-full border-b border-neutral-900 py-6 px-6 sm:px-12">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <a href="/hyde-park" class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.25em] text-white hover:text-neutral-300 transition-colors font-medium">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"></path>
         </svg>
-        Back to properties-dev.com
+        <span>Return to Portfolio</span>
       </a>
-      <div class="legal-brand-title">PROPERTIES-DEV</div>
-      <div class="legal-brand-sub">By properties-dev.com — Independent Real Estate Consultancy</div>
+
+      <div class="font-cinzel text-xs uppercase tracking-[0.3em] text-neutral-400 font-semibold">
+        PROPERTIES-DEV.COM
+      </div>
     </div>
   </header>
 
-  <!-- Legal Content -->
-  <main class="legal-main">
-    <div class="container">
-      <article class="legal-article">
-        <h1 class="legal-doc-title">Privacy Policy</h1>
-        <div class="legal-last-updated">Effective Date: January 1, 2026 | Governing Entity: properties-dev.com</div>
+  <!-- Main Legal Document Content -->
+  <main class="flex-grow flex items-center justify-center py-16 px-6 sm:px-12">
+    <article class="max-w-3xl w-full text-center space-y-12">
+      
+      <!-- Document Header -->
+      <header class="space-y-4">
+        <div class="inline-block px-4 py-1.5 border border-neutral-800 rounded-full text-xs uppercase tracking-[0.25em] text-neutral-300 font-semibold mb-2">
+          Independent Real Estate Consultancy &bull; Strategic Marketing Partner
+        </div>
+        <h1 class="font-editorial text-3xl sm:text-5xl font-bold tracking-tight text-white uppercase">
+          Privacy Policy
+        </h1>
+        <p class="text-xs uppercase tracking-widest text-neutral-400 font-medium">
+          Effective Date: January 1, 2026 &bull; Entity: properties-dev.com
+        </p>
+        <div class="w-16 h-px bg-white mx-auto mt-6 opacity-60"></div>
+      </header>
 
-        <section class="legal-content-section">
-          <h2 class="legal-section-heading">1. Corporate Entity &amp; Institutional Role</h2>
-          <p class="legal-text">
-            This Privacy Policy governs the collection, processing, and handling of personal data by <strong>properties-dev.com</strong> ("properties-dev.com", "we", "our", or "us"). 
-            properties-dev.com operates strictly and explicitly as an <strong>Independent Real Estate Consultancy and Strategic Marketing Partner</strong>.
-          </p>
-          <p class="legal-text">
-            We deliver impartial advisory services, investment evaluations, and direct connectivity to premier real estate developments across the Arab Republic of Egypt.
-          </p>
-        </section>
+      <!-- Primary Legal Core Clause -->
+      <section class="border border-neutral-800 bg-neutral-950/80 rounded-2xl p-8 sm:p-12 text-center space-y-6 shadow-2xl">
+        <p class="text-base sm:text-lg leading-relaxed text-white font-normal">
+          &ldquo;<span class="font-semibold text-white">properties-dev.com</span> respects your privacy. Information collected (such as Full Name and Phone Number) is gathered solely for real estate consultation purposes and shared strictly with authorized premier developer partners (including Hyde Park Developments) related to the client&rsquo;s inquiry fulfillment. properties-dev.com enforces a strict policy against the sale, barter, or monetization of personal data.&rdquo;
+        </p>
+      </section>
 
-        <section class="legal-content-section">
-          <h2 class="legal-section-heading">2. Purpose of Data Collection</h2>
-          <p class="legal-text">
-            We value client confidentiality and data integrity above all else. Any personal information collected through our consultation forms, direct inquiries, telephone discussions, or WhatsApp interactions—including full names, international dialing codes, telephone numbers, and property preferences—is gathered strictly in accordance with modern data privacy standards.
-          </p>
-          <div class="legal-highlight-box">
-            <p class="legal-text" style="margin-bottom: 0;">
-              <strong>Mandatory Compliance Clause:</strong> Personal data is collected solely for real estate consultation and shared only with authorized development partners directly associated with the client's verified property inquiries.
-            </p>
-          </div>
-          <p class="legal-text">
-            Under no circumstances will your information be sold, rented, monetized, or transferred to unauthorized third parties or unrelated marketing aggregators.
-          </p>
-        </section>
+      <!-- Corporate & Entity Details -->
+      <section class="border border-neutral-800 rounded-xl p-6 bg-neutral-900/40 text-center space-y-3">
+        <div class="text-xs uppercase tracking-[0.2em] text-neutral-400 font-semibold">Operating Entity &amp; Official Contact</div>
+        <div class="text-sm text-white font-medium space-y-1">
+          <p><strong class="text-white">Entity:</strong> properties-dev.com</p>
+          <p><strong class="text-white">Address:</strong> New Cairo S5-3, Second District, Fifth Settlement, First Floor.</p>
+          <p><strong class="text-white">Direct Advisory Desk / Phone:</strong> 01005080951 &bull; +201033373331</p>
+        </div>
+      </section>
 
-        <section class="legal-content-section">
-          <h2 class="legal-section-heading">3. Authorized Partner Sharing</h2>
-          <p class="legal-text">
-            To fulfill your private consultation requests, coordinate property viewings, verify pricing, and secure priority allocations, relevant data may be securely transferred to authorized primary master developers. Such sharing is strictly limited to authorized development partners whose portfolios directly match your explicit real estate investment criteria.
+      <!-- Detailed Compliance Articles -->
+      <section class="space-y-10 text-left pt-4">
+        
+        <div class="space-y-3 border-t border-neutral-900 pt-8 text-center">
+          <h2 class="font-editorial text-lg sm:text-xl font-semibold uppercase tracking-wider text-white">
+            1. Operating Entity &amp; Scope of Service
+          </h2>
+          <p class="text-neutral-300 leading-relaxed text-sm max-w-2xl mx-auto">
+            This Privacy Policy governs the operations of <strong class="text-white">properties-dev.com</strong>, acting as an independent real estate consultancy and strategic marketing partner. We provide market advisory, project presentations, payment plan breakdowns, and unit availability coordination for premier Egyptian developments.
           </p>
-        </section>
+        </div>
 
-        <section class="legal-content-section">
-          <h2 class="legal-section-heading">4. Direct Communications &amp; WhatsApp Integration</h2>
-          <p class="legal-text">
-            By submitting an inquiry or initiating an interaction through our official corporate WhatsApp desk (<strong>+201033373331</strong>), you agree to receive communications regarding investment availability, project documentation, market reports, and consultation updates from our certified advisory team. You maintain the right to opt out of non-transactional communications at any time.
+        <div class="space-y-3 border-t border-neutral-900 pt-8 text-center">
+          <h2 class="font-editorial text-lg sm:text-xl font-semibold uppercase tracking-wider text-white">
+            2. Data Collection (Full Name &amp; Phone Number)
+          </h2>
+          <p class="text-neutral-300 leading-relaxed text-sm max-w-2xl mx-auto">
+            When you submit a consultation request via our interest forms or connect via WhatsApp (+201033373331), we collect voluntarily provided details: specifically your Full Name, Phone Number, country code, and project interests. We do not collect extraneous tracking profiles, payment credentials, or unnecessary personal identifiers.
           </p>
-        </section>
+        </div>
 
-        <section class="legal-content-section">
-          <h2 class="legal-section-heading">5. Governing Law &amp; Judicial Jurisdiction</h2>
-          <p class="legal-text">
-            This Privacy Policy, and any disputes, claims, or interpretation arising out of or in connection with it or its subject matter, shall be governed by, construed, and enforced in accordance with the substantive laws of the <strong>Arab Republic of Egypt</strong>.
+        <div class="space-y-3 border-t border-neutral-900 pt-8 text-center">
+          <h2 class="font-editorial text-lg sm:text-xl font-semibold uppercase tracking-wider text-white">
+            3. Non-Sale of Personal Data &amp; Purpose-Bound Sharing
+          </h2>
+          <p class="text-neutral-300 leading-relaxed text-sm max-w-2xl mx-auto">
+            Your personal information is <strong class="text-white">never sold, rented, leased, or traded</strong> to third-party advertisers or lead aggregators. Data sharing is limited strictly to authorized development partners (e.g., Hyde Park Developments) for the direct purpose of fulfilling your specific inquiry, providing verified inventory data, and scheduling site visits.
           </p>
-          <p class="legal-text">
-            Any legal dispute, controversy, or proceeding relating to properties-dev.com shall be submitted to the exclusive jurisdiction of the competent <strong>Courts of Cairo, Egypt</strong>.
-          </p>
-        </section>
+        </div>
 
-        <section class="legal-content-section">
-          <h2 class="legal-section-heading">6. Contact &amp; Data Rights</h2>
-          <p class="legal-text">
-            If you wish to review, update, or request the deletion of your personal contact records from our consultation registry, please contact our administrative desk directly via WhatsApp at <strong>+201033373331</strong> or via properties-dev.com.
+        <div class="space-y-3 border-t border-neutral-900 pt-8 text-center">
+          <h2 class="font-editorial text-lg sm:text-xl font-semibold uppercase tracking-wider text-white">
+            4. User Rights, Rectification &amp; Opt-Out
+          </h2>
+          <p class="text-neutral-300 leading-relaxed text-sm max-w-2xl mx-auto">
+            In compliance with Egyptian Law No. 151 of 2020 on Personal Data Protection, clients retain full rights to review, correct, or request the immediate deletion of their contact information from our records at any time by contacting our advisory team at <strong class="text-white">01005080951</strong>.
           </p>
-        </section>
-      </article>
-    </div>
+        </div>
+
+        <div class="space-y-3 border-t border-neutral-900 pt-8 text-center">
+          <h2 class="font-editorial text-lg sm:text-xl font-semibold uppercase tracking-wider text-white">
+            5. Governing Law &amp; Judicial Jurisdiction
+          </h2>
+          <p class="text-neutral-300 leading-relaxed text-sm max-w-2xl mx-auto">
+            This Policy and all data processing activities are governed solely by the laws of the <strong class="text-white">Arab Republic of Egypt</strong>. Any dispute arising under or in connection with this policy shall be subject to the exclusive jurisdiction of the competent <strong class="text-white">Courts of Cairo</strong>.
+          </p>
+        </div>
+
+      </section>
+
+      <!-- Return Button Centered -->
+      <div class="pt-8 text-center">
+        <a href="/hyde-park" class="inline-block px-8 py-3.5 border border-white text-white uppercase text-xs tracking-[0.2em] font-semibold hover:bg-white hover:text-black transition-all duration-300 rounded-lg">
+          Back to properties-dev.com/hyde-park
+        </a>
+      </div>
+
+    </article>
   </main>
 
   <!-- Legal Footer -->
-  <footer class="legal-footer">
-    <div class="container">
-      <div>By properties-dev.com — Independent Real Estate Consultancy &amp; Strategic Marketing Partner</div>
-      <div style="margin-top: 0.5rem; opacity: 0.75;">© 2026 properties-dev.com. All rights reserved.</div>
-    </div>
+  <footer class="w-full border-t border-neutral-900 py-8 px-6 text-center text-xs tracking-widest text-neutral-400 uppercase">
+    <p>&copy; 2026 properties-dev.com &mdash; Strategic Partners</p>
   </footer>
-
-  <!-- Floating WhatsApp Icon -->
-  <a 
-    href="https://wa.me/201033373331" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    class="floating-whatsapp-btn" 
-    aria-label="Direct WhatsApp Contact +201033373331"
-  >
-    <svg viewBox="0 0 24 24" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-  </a>
 
 </body>
 </html>

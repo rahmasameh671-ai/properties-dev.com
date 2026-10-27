@@ -1,57 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
 /* ==========================================================================
-   PROPERTIES-DEV.COM — CORPORATE STYLESHEET
-   Aesthetic: 'Calm Luxury' Minimalist Architecture
-   Palette: Crisp Whites, Alabaster, Subtle Stone Grey, Deep Charcoal/Slate & WhatsApp Green
+   PROPERTIES-DEV.COM — HYDE PARK PORTFOLIO
+   ULTRA-CHIC EDITORIAL REAL ESTATE DESIGN SYSTEM
+   Strict Zero Gold Policy: Absolutely NO gold, bronze, or yellow tones.
+   Calm Luxury Palette:
+     • Crisp Pure White: #FFFFFF
+     • Subtle Alabaster: #FAFAF9 / #F8F9FA
+     • Slate & Architectural Charcoal: #1A202C / #2D3748 / #0F172A
+     • Architectural Cool Borders: #E2E8F0 / #CBD5E1
+     • Signature WhatsApp Emerald: #25D366 (Hover: #20BD5A)
+   Typography:
+     • Monumental Classical: 'Cinzel', serif
+     • High-Fashion Editorial: 'Playfair Display', Georgia, serif
+     • Modern Precision Sans: 'Plus Jakarta Sans', 'Inter', sans-serif
    ========================================================================== */
 
 :root {
-  /* Background Palette */
-  --bg-primary: #FFFFFF;
-  --bg-alabaster: #FAFBFC;
+  --bg-pure: #FFFFFF;
+  --bg-alabaster: #FAFAF9;
   --bg-stone: #F8F9FA;
-  --bg-stone-subtle: #F1F3F5;
-  --bg-stone-border: #E2E8F0;
-  --bg-card: #FFFFFF;
+  --bg-subtle: #F1F3F5;
+  
+  --charcoal: #1A202C;
+  --charcoal-light: #2D3748;
+  --charcoal-dark: #0F172A;
+  --slate-muted: #64748B;
+  --slate-subtle: #94A3B8;
 
-  /* Typography & Elements */
-  --text-primary: #1A202C;       /* Deep rich charcoal */
-  --text-secondary: #2D3748;     /* Slate */
-  --text-muted: #4A5568;         /* Subdued charcoal */
-  --text-light: #718096;         /* Refined subtle slate */
-  --text-white: #FFFFFF;
+  --border-cool: #E2E8F0;
+  --border-hover: #CBD5E1;
+  --border-subtle: #F1F3F5;
 
-  /* Frosted Glass */
   --frosted-bg: rgba(255, 255, 255, 0.92);
-  --frosted-border: rgba(226, 232, 240, 0.85);
-  --frosted-shadow: 0 20px 45px -15px rgba(26, 32, 44, 0.08), 0 0 1px rgba(26, 32, 44, 0.06);
+  --frosted-card: rgba(255, 255, 255, 0.96);
+  --frosted-pill: rgba(255, 255, 255, 0.90);
+  
+  --whatsapp-green: #25D366;
+  --whatsapp-hover: #20BD5A;
+  --whatsapp-glow: rgba(37, 211, 102, 0.30);
 
-  /* Primary WhatsApp Action Color */
-  --wa-green: #25D366;
-  --wa-green-hover: #20BA5A;
-  --wa-green-dark: #128C7E;
-  --wa-glow: rgba(37, 211, 102, 0.28);
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-cinzel: 'Cinzel', serif;
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
-  /* Charcoal Action Button */
-  --btn-charcoal: #1A202C;
-  --btn-charcoal-hover: #2D3748;
-
-  /* Typography */
-  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-
-  /* Layout & Spacing */
-  --container-max: 1240px;
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-pill: 9999px;
-
-  /* Transitions */
-  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-editorial: 0 20px 40px -15px rgba(26, 32, 44, 0.06), 0 0 1px 1px rgba(226, 232, 240, 0.8);
+  --shadow-hover: 0 30px 60px -15px rgba(26, 32, 44, 0.12), 0 0 1px 1px rgba(203, 213, 225, 0.9);
 }
 
-/* Base Reset & Box Sizing */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -59,1009 +55,272 @@
 }
 
 html {
-  font-size: 16px;
   scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
-  background-color: var(--bg-stone);
-  color: var(--text-primary);
-  overflow-x: hidden;
-}
-
-body {
-  font-family: var(--font-body);
-  font-weight: 400;
-  line-height: 1.6;
-  color: var(--text-primary);
-  background-color: var(--bg-stone);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
-  position: relative;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-pure);
+  color: var(--charcoal-light);
+  line-height: 1.6;
+  overflow-x: hidden;
+  margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-  transition: color var(--transition-fast);
+/* Typography classes */
+h1, h2, h3, h4, .font-editorial {
+  font-family: var(--font-serif);
+  color: var(--charcoal);
+  letter-spacing: -0.02em;
 }
 
-button, input, select, textarea {
-  font: inherit;
-  color: inherit;
+.font-cinzel {
+  font-family: var(--font-cinzel);
 }
 
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
+.font-editorial-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
 }
 
-/* Container Utility */
-.container {
-  width: 100%;
-  max-width: var(--container-max);
+/* Editorial Numerals */
+.editorial-numeral {
+  font-family: var(--font-serif);
+  font-size: 3.25rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--charcoal);
+  letter-spacing: -0.04em;
+}
+
+@media (min-width: 640px) {
+  .editorial-numeral {
+    font-size: 4rem;
+  }
+}
+
+/* Architectural Grid & Ambient Atmosphere */
+.bg-architectural-grid {
+  background-color: #FFFFFF;
+  background-image: 
+    linear-gradient(to right, rgba(226, 232, 240, 0.45) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(226, 232, 240, 0.45) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Containers */
+.container-chic {
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
-/* Badges & Eyebrows */
-.badge-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.4rem 1.1rem;
-  background: rgba(26, 32, 44, 0.05);
-  border: 1px solid rgba(26, 32, 44, 0.1);
-  border-radius: var(--radius-pill);
-  font-family: var(--font-display);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  margin-bottom: 1.25rem;
+@media (min-width: 640px) {
+  .container-chic {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
 
-.badge-pill::before {
-  content: "";
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--text-secondary);
+@media (min-width: 1024px) {
+  .container-chic {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 /* ==========================================================================
-   1. HERO SECTION (Starts directly at absolute top of viewport, top: 0)
+   BUTTONS (CALM LUXURY)
    ========================================================================== */
-.hero-section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  margin-top: 0;
-  padding-top: 3.5rem;
-  padding-bottom: 5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--bg-alabaster);
-  overflow: hidden;
-}
 
-/* Hero Architectural Background (Subtle Monochrome Tone) */
-.hero-bg-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-  background-image: 
-    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 250, 0.85) 60%, rgba(241, 243, 245, 0.95) 100%),
-    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1800&auto=format&fit=crop");
-  background-size: cover;
-  background-position: center 30%;
-  filter: grayscale(100%) contrast(95%) brightness(102%);
-  opacity: 0.42;
-}
-
-/* Subtle architectural grid lines in hero */
-.hero-bg-grid {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-  background-size: 80px 80px;
-  background-image:
-    linear-gradient(to right, rgba(26, 32, 44, 0.02) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(26, 32, 44, 0.02) 1px, transparent 1px);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 3;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-/* Top Center Branding */
-.hero-brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2.25rem;
-}
-
-.brand-logo-text {
-  font-family: var(--font-display);
-  font-size: 1.75rem;
-  font-weight: 800;
-  letter-spacing: 0.32em;
+/* Solid Green WhatsApp Button reading 'CONTACT US' */
+.btn-whatsapp {
+  background-color: var(--whatsapp-green);
+  color: #FFFFFF !important;
+  font-weight: 700;
+  font-family: var(--font-sans);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--text-primary);
-  line-height: 1.1;
-  margin-left: 0.32em; /* Balance letter spacing visual center */
-}
-
-.brand-signature-sub {
-  font-family: var(--font-body);
-  font-size: 0.82rem;
-  font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--text-light);
-  margin-top: 0.45rem;
-}
-
-/* Hero Typography */
-.hero-eyebrow {
-  font-family: var(--font-display);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  padding: 0.45rem 1.25rem;
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid var(--bg-stone-border);
-  border-radius: var(--radius-pill);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  margin-bottom: 1.5rem;
-  display: inline-block;
-}
-
-.hero-headline {
-  font-family: var(--font-display);
-  font-size: clamp(2.35rem, 5.5vw, 4.25rem);
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  line-height: 1.12;
-  color: var(--text-primary);
-  max-width: 900px;
-  margin-bottom: 1.5rem;
-}
-
-.hero-subtitle {
-  font-family: var(--font-body);
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
-  font-weight: 400;
-  line-height: 1.65;
-  color: var(--text-muted);
-  max-width: 720px;
-  margin-bottom: 3.25rem;
-}
-
-/* Lead Capture Form — Frosted Glass Container */
-.lead-form-wrapper {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.frosted-form-card {
-  background: var(--frosted-bg);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  border: 1px solid var(--frosted-border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--frosted-shadow);
-  padding: 2.5rem 2.25rem;
-  text-align: left;
-  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
-}
-
-.frosted-form-card:hover {
-  box-shadow: 0 25px 50px -18px rgba(26, 32, 44, 0.12), 0 0 1px rgba(26, 32, 44, 0.08);
-}
-
-.form-title {
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--text-primary);
-  text-align: center;
-  margin-bottom: 1.85rem;
-  position: relative;
-  padding-bottom: 0.85rem;
-}
-
-.form-title::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 44px;
-  height: 2px;
-  background: var(--text-primary);
-  border-radius: 2px;
-}
-
-.consultation-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.35rem;
-}
-
-.form-field-group {
-  display: flex;
-  flex-direction: column;
-  gap: 0.45rem;
-}
-
-.form-label {
-  font-family: var(--font-display);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-}
-
-/* Split Input Layout for Phone */
-.phone-split-container {
-  display: flex;
-  gap: 0.5rem;
-  width: 100%;
-}
-
-.country-code-select {
-  width: 135px;
-  min-width: 135px;
-  height: 52px;
-  padding: 0 0.85rem;
-  background-color: #FFFFFF;
-  border: 1px solid var(--bg-stone-border);
-  border-radius: var(--radius-sm);
-  color: var(--text-primary);
-  font-size: 0.92rem;
-  font-weight: 500;
-  outline: none;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-  appearance: auto;
-  cursor: pointer;
-}
-
-.country-code-select:focus {
-  border-color: var(--text-primary);
-  box-shadow: 0 0 0 2px rgba(26, 32, 44, 0.12);
-}
-
-.clean-input {
-  width: 100%;
-  height: 52px;
-  padding: 0 1.1rem;
-  background-color: #FFFFFF;
-  border: 1px solid var(--bg-stone-border);
-  border-radius: var(--radius-sm);
-  color: var(--text-primary);
-  font-size: 0.96rem;
-  font-weight: 500;
-  outline: none;
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
-}
-
-.clean-input:focus {
-  border-color: var(--text-primary);
-  box-shadow: 0 0 0 2px rgba(26, 32, 44, 0.12);
-}
-
-/* Form Submit Button — Solid Charcoal */
-.btn-submit-charcoal {
-  width: 100%;
-  height: 54px;
-  min-height: 48px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--btn-charcoal);
-  color: var(--text-white);
-  font-family: var(--font-display);
-  font-size: 0.88rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  border-radius: var(--radius-sm);
-  transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
-  margin-top: 0.4rem;
-  box-shadow: 0 4px 14px rgba(26, 32, 44, 0.15);
-}
-
-.btn-submit-charcoal:hover {
-  background-color: var(--btn-charcoal-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(26, 32, 44, 0.22);
-}
-
-.btn-submit-charcoal:active {
-  transform: translateY(0);
-}
-
-/* Form Disclaimer */
-.form-disclaimer {
-  font-size: 0.76rem;
-  line-height: 1.55;
-  color: var(--text-light);
-  margin-top: 1.15rem;
-  text-align: center;
-}
-
-/* Form Success State Notification */
-.form-success-banner {
-  display: none;
-  padding: 1.5rem;
-  background: #FFFFFF;
-  border: 1px solid var(--wa-green);
-  border-radius: var(--radius-md);
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.form-success-banner.active {
-  display: block;
-  animation: fadeIn 0.4s ease forwards;
-}
-
-.success-headline {
-  font-family: var(--font-display);
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
-}
-
-.success-text {
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  margin-bottom: 1.25rem;
-}
-
-/* ==========================================================================
-   2. OUR EXPERTISE & MARKET LEADERSHIP SECTION
-   ========================================================================== */
-.expertise-section {
-  padding: 6.5rem 0;
-  background-color: var(--bg-primary);
-  border-top: 1px solid var(--bg-stone-border);
-  position: relative;
-}
-
-.section-header-centered {
-  text-align: center;
-  max-width: 840px;
-  margin: 0 auto 4rem auto;
-}
-
-.section-headline {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 3.8vw, 2.9rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-  color: var(--text-primary);
-  margin-bottom: 1.25rem;
-}
-
-.section-narrative {
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: var(--text-muted);
-}
-
-/* Value Pillars Grid */
-.pillars-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-bottom: 3.5rem;
-}
-
-.pillar-card {
-  background-color: var(--bg-stone);
-  border: 1px solid var(--bg-stone-border);
-  border-radius: var(--radius-md);
-  padding: 2.75rem 2rem;
-  display: flex;
-  flex-direction: column;
-  transition: transform var(--transition-smooth), border-color var(--transition-smooth), box-shadow var(--transition-smooth);
-  position: relative;
-}
-
-.pillar-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(26, 32, 44, 0.3);
-  box-shadow: 0 15px 30px -10px rgba(26, 32, 44, 0.08);
-}
-
-.pillar-icon-box {
-  width: 52px;
-  height: 52px;
-  border-radius: var(--radius-sm);
-  background: #FFFFFF;
-  border: 1px solid var(--bg-stone-border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.75rem;
-  color: var(--text-primary);
-}
-
-.pillar-title {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  color: var(--text-primary);
-  margin-bottom: 0.85rem;
-}
-
-.pillar-desc {
-  font-size: 0.95rem;
-  line-height: 1.65;
-  color: var(--text-muted);
-}
-
-/* WhatsApp Action Buttons (Solid Vibrant WhatsApp Green #25D366) */
-.btn-whatsapp-action {
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  min-height: 52px;
-  padding: 0.85rem 2.2rem;
-  background-color: var(--wa-green);
-  color: #FFFFFF;
-  font-family: var(--font-display);
-  font-size: 0.88rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  border-radius: var(--radius-pill);
-  transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
-  box-shadow: 0 6px 20px var(--wa-glow);
+  border-radius: 9999px;
+  box-shadow: 0 10px 25px -4px var(--whatsapp-glow);
   text-decoration: none;
+  cursor: pointer;
+  border: none;
 }
 
-.btn-whatsapp-action:hover {
-  background-color: var(--wa-green-hover);
+.btn-whatsapp:hover {
+  background-color: var(--whatsapp-hover);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.38);
+  box-shadow: 0 16px 32px -4px rgba(37, 211, 102, 0.45);
+  color: #FFFFFF !important;
 }
 
-.btn-whatsapp-action:active {
+.btn-whatsapp:active {
   transform: translateY(0);
 }
 
-.btn-whatsapp-action svg {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-  flex-shrink: 0;
-}
-
-.center-action-wrapper {
-  text-align: center;
-}
-
-/* ==========================================================================
-   3. NATIONWIDE DESTINATIONS PORTFOLIO
-   ========================================================================== */
-.destinations-section {
-  padding: 6.5rem 0;
-  background-color: var(--bg-stone-subtle);
-  border-top: 1px solid var(--bg-stone-border);
-  position: relative;
-}
-
-.destinations-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-bottom: 4rem;
-}
-
-.destination-card {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background-color: var(--text-primary);
-  min-height: 380px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  border: 1px solid rgba(226, 232, 240, 0.8);
-  box-shadow: 0 10px 25px -5px rgba(26, 32, 44, 0.06);
-  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
-}
-
-.destination-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 35px -8px rgba(26, 32, 44, 0.15);
-}
-
-.destination-img-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
-  filter: grayscale(35%) contrast(105%) brightness(88%);
-}
-
-.destination-card:hover .destination-img-layer {
-  transform: scale(1.05);
-  filter: grayscale(15%) contrast(108%) brightness(92%);
-}
-
-.destination-gradient-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(26, 32, 44, 0.08) 0%,
-    rgba(26, 32, 44, 0.45) 50%,
-    rgba(15, 23, 42, 0.94) 100%
-  );
-  z-index: 2;
-}
-
-.destination-body {
-  position: relative;
-  z-index: 3;
-  padding: 2.25rem 2rem;
-  color: #FFFFFF;
-}
-
-.destination-tag {
-  display: inline-block;
-  font-family: var(--font-display);
-  font-size: 0.68rem;
+/* Solid Charcoal Button reading 'SUBMIT' */
+.btn-charcoal {
+  background-color: var(--charcoal);
+  color: #FFFFFF !important;
+  font-family: var(--font-sans);
   font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  background: rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 0.25rem 0.75rem;
-  border-radius: var(--radius-pill);
-  margin-bottom: 0.85rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.destination-name {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: -0.015em;
-  line-height: 1.25;
-  color: #FFFFFF;
-  margin-bottom: 0.6rem;
-}
-
-.destination-description {
-  font-size: 0.94rem;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.84);
-}
-
-/* ==========================================================================
-   4. TECHNICAL FOOTER & COMPLIANCE
-   ========================================================================== */
-.site-footer {
-  background-color: var(--bg-alabaster);
-  border-top: 1px solid var(--bg-stone-border);
-  padding: 5rem 0 3.5rem 0;
-  text-align: center;
-  position: relative;
-}
-
-.footer-content-stack {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 820px;
-  margin: 0 auto;
-}
-
-.footer-brand {
-  margin-bottom: 2rem;
-}
-
-.footer-brand-title {
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  font-weight: 800;
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-  color: var(--text-primary);
-}
-
-.footer-brand-sub {
-  font-family: var(--font-body);
-  font-size: 0.82rem;
-  font-weight: 600;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--text-light);
-  margin-top: 0.35rem;
-}
-
-.footer-action-wrap {
-  margin-bottom: 2.5rem;
-}
-
-.footer-disclaimer-text {
-  font-size: 0.82rem;
-  line-height: 1.7;
-  color: var(--text-light);
-  margin-bottom: 2rem;
-  padding: 0 1rem;
-}
-
-.footer-legal-links {
-  display: flex;
+  transition: all 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 1.75rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.footer-legal-link {
-  font-family: var(--font-display);
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-secondary);
-  position: relative;
-  padding: 0.3rem 0;
-}
-
-.footer-legal-link::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 1px;
-  background-color: var(--text-primary);
-  transition: width var(--transition-fast);
-}
-
-.footer-legal-link:hover {
-  color: var(--text-primary);
-}
-
-.footer-legal-link:hover::after {
-  width: 100%;
-}
-
-.footer-legal-separator {
-  color: var(--bg-stone-border);
-}
-
-.footer-signature {
-  font-family: var(--font-display);
-  font-size: 0.76rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--text-light);
-}
-
-/* ==========================================================================
-   FLOATING WHATSAPP BUTTON (Fixed Bottom-Right #25D366)
-   ========================================================================== */
-.floating-whatsapp-btn {
-  position: fixed;
-  bottom: 28px;
-  right: 28px;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: var(--wa-green);
-  color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 24px var(--wa-glow), 0 4px 10px rgba(0, 0, 0, 0.1);
-  z-index: 999;
-  transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
+  gap: 0.625rem;
+  border: 1px solid var(--charcoal);
+  border-radius: 0.875rem;
+  box-shadow: 0 10px 20px -5px rgba(26, 32, 44, 0.22);
+  cursor: pointer;
   text-decoration: none;
 }
 
-.floating-whatsapp-btn:hover {
-  background-color: var(--wa-green-hover);
-  transform: scale(1.08);
-  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.42);
+.btn-charcoal:hover {
+  background-color: var(--charcoal-light);
+  border-color: var(--charcoal-light);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -5px rgba(26, 32, 44, 0.32);
 }
 
-.floating-whatsapp-btn:active {
-  transform: scale(0.96);
+.btn-charcoal:active {
+  transform: translateY(0);
 }
 
-.floating-whatsapp-btn svg {
-  width: 32px;
-  height: 32px;
-  fill: currentColor;
+/* ==========================================================================
+   FROSTED GLASS & EDITORIAL CARDS
+   ========================================================================== */
+.frosted-glass {
+  background: var(--frosted-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-cool);
+  box-shadow: var(--shadow-editorial);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Gentle Pulse Ring Animation */
-.floating-whatsapp-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+.frosted-glass:hover {
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-hover);
+}
+
+.frosted-pill {
+  background: var(--frosted-pill);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(226, 232, 240, 0.95);
+}
+
+/* Form inputs (Clean blank, no placeholder examples) */
+.form-label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--slate-muted);
+  margin-bottom: 0.375rem;
+}
+
+.form-input {
   width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  border: 2px solid var(--wa-green);
-  opacity: 0.6;
-  animation: waPulse 2.4s infinite cubic-bezier(0.25, 0.1, 0.25, 1);
-  pointer-events: none;
+  padding: 0.875rem 1.125rem;
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--border-cool);
+  border-radius: 0.75rem;
+  color: var(--charcoal);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  transition: all 0.22s ease;
 }
 
-@keyframes waPulse {
+.form-input:focus {
+  outline: none;
+  border-color: var(--charcoal);
+  box-shadow: 0 0 0 3px rgba(26, 32, 44, 0.08);
+}
+
+.country-select-wrapper select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748B' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2.25rem;
+}
+
+/* Sticky Project Quick-Jump Navigator */
+.sticky-subnav {
+  position: sticky;
+  top: 1rem;
+  z-index: 40;
+  transition: all 0.3s ease;
+}
+
+/* Floating WhatsApp Pulse */
+@keyframes pulse-ring {
   0% {
-    transform: scale(1);
-    opacity: 0.7;
+    transform: scale(0.96);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
   }
   70% {
-    transform: scale(1.36);
-    opacity: 0;
+    transform: scale(1);
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
   }
   100% {
-    transform: scale(1.36);
-    opacity: 0;
+    transform: scale(0.96);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
   }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
+.pulse-whatsapp {
+  animation: pulse-ring 2.6s infinite;
 }
 
-/* ==========================================================================
-   STANDALONE LEGAL PAGES STYLING (100% White Text on Solid Black Background)
-   Strict compliance: Monochromatic calm luxury, 100% white on #000000.
-   ========================================================================== */
-body.legal-page {
-  background-color: #000000;
-  color: #FFFFFF;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-.legal-header {
-  padding: 3.5rem 0 2rem 0;
-  border-bottom: 1px solid #1E293B;
-  background-color: #000000;
+::-webkit-scrollbar-track {
+  background: #F1F3F5;
 }
 
-.legal-back-nav {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-family: var(--font-display);
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #CBD5E1;
-  margin-bottom: 2rem;
-  transition: color var(--transition-fast);
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
 }
 
-.legal-back-nav:hover {
-  color: #FFFFFF;
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
 }
 
-.legal-brand-title {
-  font-family: var(--font-display);
-  font-size: 1.4rem;
-  font-weight: 800;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  margin-bottom: 0.35rem;
+/* Responsive Image Hover */
+.editorial-image-frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
 }
 
-.legal-brand-sub {
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #94A3B8;
+.editorial-image-frame img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.legal-main {
-  padding: 4rem 0 6rem 0;
-  background-color: #000000;
-  color: #FFFFFF;
-  flex: 1;
-}
-
-.legal-article {
-  max-width: 820px;
-  margin: 0 auto;
-}
-
-.legal-doc-title {
-  font-family: var(--font-display);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-  color: #FFFFFF;
-  margin-bottom: 1rem;
-}
-
-.legal-last-updated {
-  font-size: 0.85rem;
-  color: #94A3B8;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin-bottom: 3rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid #1E293B;
-}
-
-.legal-content-section {
-  margin-bottom: 2.75rem;
-}
-
-.legal-section-heading {
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  color: #FFFFFF;
-  margin-bottom: 1rem;
-}
-
-.legal-text {
-  font-size: 0.98rem;
-  line-height: 1.8;
-  color: #E2E8F0;
-  margin-bottom: 1rem;
-}
-
-.legal-highlight-box {
-  background-color: #0F172A;
-  border: 1px solid #334155;
-  border-radius: var(--radius-md);
-  padding: 1.5rem 1.75rem;
-  margin: 1.5rem 0;
-}
-
-.legal-footer {
-  background-color: #000000;
-  border-top: 1px solid #1E293B;
-  padding: 3rem 0;
-  text-align: center;
-  color: #94A3B8;
-  font-size: 0.82rem;
-}
-
-/* ==========================================================================
-   MOBILE RESPONSIVENESS & THUMB-FRIENDLY TAP TARGETS
-   ========================================================================== */
-@media (max-width: 992px) {
-  .pillars-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .destinations-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-
-  .destination-card {
-    min-height: 320px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-section {
-    padding-top: 2.5rem;
-    padding-bottom: 4rem;
-  }
-
-  .brand-logo-text {
-    font-size: 1.45rem;
-    letter-spacing: 0.24em;
-    margin-left: 0.24em;
-  }
-
-  .brand-signature-sub {
-    font-size: 0.74rem;
-    letter-spacing: 0.16em;
-  }
-
-  .frosted-form-card {
-    padding: 1.85rem 1.35rem;
-    border-radius: var(--radius-md);
-  }
-
-  .phone-split-container {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .country-code-select {
-    width: 100%;
-    min-width: 100%;
-  }
-
-  .expertise-section,
-  .destinations-section {
-    padding: 4.5rem 0;
-  }
-
-  .pillar-card {
-    padding: 2rem 1.5rem;
-  }
-
-  .destination-body {
-    padding: 1.75rem 1.35rem;
-  }
-
-  .floating-whatsapp-btn {
-    bottom: 20px;
-    right: 20px;
-    width: 56px;
-    height: 56px;
-  }
-
-  .footer-legal-links {
-    gap: 1.25rem;
-  }
+.editorial-image-frame:hover img {
+  transform: scale(1.04);
 }

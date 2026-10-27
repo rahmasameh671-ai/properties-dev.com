@@ -26,11 +26,23 @@ const server = http.createServer((req, res) => {
     reqUrl = reqUrl.slice(0, -1);
   }
 
+  // Handle nested /hyde-park/ assets mapping to root static assets
+  if (reqUrl.startsWith('/hyde-park/css/') || reqUrl.startsWith('/hyde-park/js/') || reqUrl.startsWith('/hyde-park/images/')) {
+    reqUrl = reqUrl.replace('/hyde-park', '');
+  }
+
   let filePath = path.join(PUBLIC_DIR, reqUrl);
 
   // Check if direct file or directory route exists
-  if (reqUrl === '/') {
-    filePath = path.join(PUBLIC_DIR, 'index.html');
+  if (reqUrl === '/' || reqUrl === '/hyde-park') {
+    if (reqUrl === '/hyde-park') {
+      filePath = path.join(PUBLIC_DIR, 'hyde-park', 'index.html');
+      if (!fs.existsSync(filePath)) {
+        filePath = path.join(PUBLIC_DIR, 'hyde-park.html');
+      }
+    } else {
+      filePath = path.join(PUBLIC_DIR, 'index.html');
+    }
   } else if (!path.extname(filePath)) {
     // Check .html extension or folder index.html
     if (fs.existsSync(filePath + '.html')) {
@@ -46,11 +58,11 @@ const server = http.createServer((req, res) => {
       res.end(`
         <!DOCTYPE html>
         <html>
-        <head><title>404 - Page Not Found</title></head>
-        <body style="font-family: sans-serif; text-align: center; padding: 50px; background: #000; color: #fff;">
-          <h1>404</h1>
-          <p>Page Not Found</p>
-          <a href="/" style="color: #25D366;">Return to properties-dev.com</a>
+        <head><title>404 - Page Not Found | properties-dev.com</title></head>
+        <body style="font-family: sans-serif; text-align: center; padding: 60px 20px; background: #0F172A; color: #FFFFFF;">
+          <h1 style="font-size: 4rem; margin-bottom: 10px;">404</h1>
+          <p style="font-size: 1.25rem; color: #94A3B8; margin-bottom: 30px;">Page Not Found</p>
+          <a href="/hyde-park" style="color: #25D366; text-decoration: none; font-weight: bold; border: 1px solid #25D366; padding: 12px 24px; border-radius: 9999px;">Return to properties-dev.com/hyde-park</a>
         </body>
         </html>
       `);
@@ -66,5 +78,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`properties-dev.com local preview server running at: http://localhost:${PORT}`);
+  console.log(`properties-dev.com local preview server running at: http://localhost:${PORT}/hyde-park`);
 });
