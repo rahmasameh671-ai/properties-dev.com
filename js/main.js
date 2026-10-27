@@ -144,7 +144,7 @@ function initLeadForm() {
       console.warn('LocalStorage error:', storageErr);
     }
 
-    // Google Ads & Analytics Conversion Event (AW-17103245801)
+    // Google Ads & Analytics Conversion Event (AW-17050255563)
     if (typeof window.gtag === 'function') {
       try {
         window.gtag('event', 'generate_lead', {
@@ -152,7 +152,7 @@ function initLeadForm() {
           event_label: 'Hyde Park Interest Form — properties-dev.com',
           value: 1.0,
           currency: 'EGP',
-          send_to: 'AW-17103245801'
+          send_to: 'AW-17050255563'
         });
       } catch (gtagErr) {
         console.warn('Google Tag tracking error:', gtagErr);
@@ -293,7 +293,7 @@ function initAnalytics() {
           window.gtag('event', 'contact', {
             event_category: 'WhatsApp',
             event_label: link.getAttribute('href') || 'WhatsApp Consultation — properties-dev.com',
-            send_to: 'AW-17103245801'
+            send_to: 'AW-17050255563'
           });
         } catch (err) {
           console.warn('Google Tag WhatsApp tracking error:', err);
