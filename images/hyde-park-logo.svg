@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" fill="none">
+  <!-- Architectural Minimalist HP Monogram / Crest -->
+  <g transform="translate(10, 10)">
+    <rect x="0" y="0" width="60" height="60" rx="4" fill="#1A202C" />
+    <!-- Monogram H with architectural arch -->
+    <path d="M18 16V44M42 16V44M18 30H42" stroke="#FFFFFF" stroke-width="3" stroke-linecap="square" />
+    <circle cx="30" cy="22" r="3" fill="#FFFFFF" />
+  </g>
+  <!-- Wordmark in Calm Luxury Editorial Typography -->
+  <g transform="translate(85, 20)">
+    <text x="0" y="24" font-family="'Playfair Display', Georgia, serif" font-size="24" font-weight="700" fill="#1A202C" letter-spacing="0.18em">HYDE PARK</text>
+    <text x="2" y="44" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="#64748B" letter-spacing="0.38em">DEVELOPMENTS</text>
+  </g>
+</svg>

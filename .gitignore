@@ -1,0 +1,15 @@
+# Temporary scripts & local files
+check_gh.js
+create_and_push.js
+debug_find.js
+test_compliance.js
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Logs & temp
+*.log
